@@ -2,6 +2,9 @@ function FindProxyForURL(url, host) {
    if (shExpMatch(url,"*webmail.iongeo.com/*")) {
      return "DIRECT";
    }
+   if (shExpMatch(url,"*.ieee.*/*")) {
+     return "SOCKS5 localhost:9999";
+   }
    if (shExpMatch(url,"*.gxt.com/*")) {
      return "SOCKS5 localhost:9090";
    }
